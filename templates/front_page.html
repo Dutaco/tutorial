@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block content %}
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+            
+            <div class="content-page">
+                <div class="content">
+            
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                    <form action="/rearpage" method="POST">
+                        {# This hidden_tag is a CSRF security feature. #}
+                        {{ form.hidden_tag() }}
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                    </div>
+                                    <h4 class="page-title">Courses</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+                       
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="{{ url_for('static', filename='images/course1.png') }}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ name1 }}</h5>
+                                        <p class="card-text">{{ cont1 }}</p>
+                                        <p>
+                                        <h5 class="one float-left">{{ pers1 }} % completed</h5>{{ form.submit1(class="btn btn-primary btn-block float-right") }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="{{ url_for('static', filename='images/course2.png') }}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ name2 }}</h5>
+                                        <p class="card-text">{{ cont2 }}</p>
+                                        <p><h5 class="one float-left">{{ pers2 }} % completed</h5>{{ form.submit2(class="btn btn-primary btn-block float-right") }}
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col"></div>
+
+                            <!-- end col-12 -->
+                        </div> <!-- end row -->
+                    </form> 
+                    </div> <!-- container -->
+            
+                </div> <!-- content -->
+            
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+            
+                            <div class="col-md-6">
+                                <div class="text-md-center footer-links d-none d-sm-block">
+                                    <a href="javascript:void(0);">Impressum</a>
+                                    <a href="javascript:void(0);">Dataset</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+            
+            </div>
+            
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+{% endblock %}

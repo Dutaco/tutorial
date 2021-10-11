@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+
+                                    </div>
+                                    <h4 class="page-title">Course Info</h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
+
+                            <div class="col d-flex align-items-center justify-content-center">
+                                <a href="dashboard.html">
+                                    <span><img src="{{ url_for('static', filename='images/LOGO_kopie.png') }}"></span>
+                                </a>
+                            </div>                        
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="text-md-center footer-links d-none d-sm-block">
+                                    <a href="javascript:void(0);">Impressum</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+{% endblock %}
+  
